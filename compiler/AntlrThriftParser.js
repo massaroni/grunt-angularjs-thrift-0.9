@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 ./grammars/AntlrThrift.g 2015-02-04 08:00:16
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 ./grammars/AntlrThrift.g 2015-08-07 17:37:16
 
 var AntlrThriftParser = function(input, state) {
     if (!state) {
@@ -4030,10 +4030,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         try {
             // ./grammars/AntlrThrift.g:201:8: ( 'extends' IDENTIFIER -> ^( EXTENDS IDENTIFIER ) )
             // ./grammars/AntlrThrift.g:202:3: 'extends' IDENTIFIER
-            string_literal120=this.match(this.input,104,AntlrThriftParser.FOLLOW_104_in_extends1494);  
+            string_literal120=this.match(this.input,104,AntlrThriftParser.FOLLOW_104_in_extends1493);  
             stream_104.add(string_literal120);
 
-            IDENTIFIER121=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_extends1496);  
+            IDENTIFIER121=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_extends1495);  
             stream_IDENTIFIER.add(IDENTIFIER121);
 
 
@@ -4139,7 +4139,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt35) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:205:3: oneway
-                    this.pushFollow(AntlrThriftParser.FOLLOW_oneway_in_function1513);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_oneway_in_function1512);
                     oneway122=this.oneway();
 
                     this.state._fsp--;
@@ -4151,20 +4151,20 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_functionType_in_function1516);
+            this.pushFollow(AntlrThriftParser.FOLLOW_functionType_in_function1515);
             functionType123=this.functionType();
 
             this.state._fsp--;
 
             stream_functionType.add(functionType123.getTree());
-            name=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_function1520);  
+            name=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_function1519);  
             stream_IDENTIFIER.add(name);
 
 
               	this.functionName = name.getText();
               	this.services[this.serviceName][this.functionName] = [];
               
-            char_literal124=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_function1524);  
+            char_literal124=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_function1523);  
             stream_105.add(char_literal124);
 
             // ./grammars/AntlrThrift.g:208:9: ( field )*
@@ -4181,7 +4181,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                 switch (alt36) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:208:9: field
-                    this.pushFollow(AntlrThriftParser.FOLLOW_field_in_function1526);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_field_in_function1525);
                     field125=this.field();
 
                     this.state._fsp--;
@@ -4196,7 +4196,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                 }
             } while (true);
 
-            char_literal126=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_function1529);  
+            char_literal126=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_function1528);  
             stream_106.add(char_literal126);
 
             // ./grammars/AntlrThrift.g:208:20: ( throwz )?
@@ -4209,7 +4209,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt37) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:208:20: throwz
-                    this.pushFollow(AntlrThriftParser.FOLLOW_throwz_in_function1531);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_throwz_in_function1530);
                     throwz127=this.throwz();
 
                     this.state._fsp--;
@@ -4231,7 +4231,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt38) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:208:28: typeAnnotations
-                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_function1534);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_function1533);
                     typeAnnotations128=this.typeAnnotations();
 
                     this.state._fsp--;
@@ -4253,7 +4253,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt39) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:208:45: commaOrSemicolon
-                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_function1537);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_function1536);
                     commaOrSemicolon129=this.commaOrSemicolon();
 
                     this.state._fsp--;
@@ -4367,7 +4367,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         try {
             // ./grammars/AntlrThrift.g:211:7: ( 'oneway' -> ONEWAY )
             // ./grammars/AntlrThrift.g:212:3: 'oneway'
-            string_literal130=this.match(this.input,107,AntlrThriftParser.FOLLOW_107_in_oneway1573);  
+            string_literal130=this.match(this.input,107,AntlrThriftParser.FOLLOW_107_in_oneway1572);  
             stream_107.add(string_literal130);
 
 
@@ -4445,13 +4445,14 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         try {
             // ./grammars/AntlrThrift.g:214:7: ( 'throws' '(' ( field )* ')' -> ^( THROWS ( field )* ) )
             // ./grammars/AntlrThrift.g:215:3: 'throws' '(' ( field )* ')'
-            string_literal131=this.match(this.input,108,AntlrThriftParser.FOLLOW_108_in_throwz1586);  
+            string_literal131=this.match(this.input,108,AntlrThriftParser.FOLLOW_108_in_throwz1585);  
             stream_108.add(string_literal131);
 
-            char_literal132=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_throwz1588);  
+            char_literal132=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_throwz1587);  
             stream_105.add(char_literal132);
 
-            // ./grammars/AntlrThrift.g:215:16: ( field )*
+            this.inThrows = true;
+            // ./grammars/AntlrThrift.g:215:40: ( field )*
             loop40:
             do {
                 var alt40=2;
@@ -4464,8 +4465,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                 switch (alt40) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:215:16: field
-                    this.pushFollow(AntlrThriftParser.FOLLOW_field_in_throwz1590);
+                    // ./grammars/AntlrThrift.g:215:40: field
+                    this.pushFollow(AntlrThriftParser.FOLLOW_field_in_throwz1591);
                     field133=this.field();
 
                     this.state._fsp--;
@@ -4480,7 +4481,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                 }
             } while (true);
 
-            char_literal134=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_throwz1593);  
+            this.inThrows = false;
+            char_literal134=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_throwz1595);  
             stream_106.add(char_literal134);
 
 
@@ -4495,14 +4497,14 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 215:27: -> ^( THROWS ( field )* )
+            // 215:75: -> ^( THROWS ( field )* )
             {
-                // ./grammars/AntlrThrift.g:215:30: ^( THROWS ( field )* )
+                // ./grammars/AntlrThrift.g:215:78: ^( THROWS ( field )* )
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(THROWS, "THROWS"), root_1);
 
-                // ./grammars/AntlrThrift.g:215:39: ( field )*
+                // ./grammars/AntlrThrift.g:215:87: ( field )*
                 while ( stream_field.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_field.nextTree());
 
@@ -4591,7 +4593,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt41) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:218:3: fieldIdentifier
-                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldIdentifier_in_field1611);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldIdentifier_in_field1613);
                     fieldIdentifier135=this.fieldIdentifier();
 
                     this.state._fsp--;
@@ -4613,7 +4615,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             switch (alt42) {
                 case 1 :
                     // ./grammars/AntlrThrift.g:218:20: fieldRequiredness
-                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldRequiredness_in_field1614);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldRequiredness_in_field1616);
                     fieldRequiredness136=this.fieldRequiredness();
 
                     this.state._fsp--;
@@ -4625,23 +4627,25 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_field1617);
+            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_field1619);
             fieldType137=this.fieldType();
 
             this.state._fsp--;
 
             stream_fieldType.add(fieldType137.getTree());
-            name=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_field1621);  
+            name=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_field1623);  
             stream_IDENTIFIER.add(name);
 
 
 
-              	if (!!this.serviceName) {
-              	  this.services[this.serviceName][this.functionName].push(name.getText());
+                if (!!this.serviceName) {
+                  if (!this.inThrows) {
+              	    this.services[this.serviceName][this.functionName].push(name.getText());
+              	  }
               	}
 
               
-            // ./grammars/AntlrThrift.g:224:4: ( fieldValue )?
+            // ./grammars/AntlrThrift.g:226:4: ( fieldValue )?
             var alt43=2;
             var LA43_0 = this.input.LA(1);
 
@@ -4650,8 +4654,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt43) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:224:4: fieldValue
-                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldValue_in_field1624);
+                    // ./grammars/AntlrThrift.g:226:4: fieldValue
+                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldValue_in_field1626);
                     fieldValue138=this.fieldValue();
 
                     this.state._fsp--;
@@ -4663,7 +4667,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:225:5: ( xsdOptional )?
+            // ./grammars/AntlrThrift.g:227:5: ( xsdOptional )?
             var alt44=2;
             var LA44_0 = this.input.LA(1);
 
@@ -4672,8 +4676,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt44) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:225:5: xsdOptional
-                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdOptional_in_field1631);
+                    // ./grammars/AntlrThrift.g:227:5: xsdOptional
+                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdOptional_in_field1633);
                     xsdOptional139=this.xsdOptional();
 
                     this.state._fsp--;
@@ -4685,7 +4689,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:225:18: ( xsdNillable )?
+            // ./grammars/AntlrThrift.g:227:18: ( xsdNillable )?
             var alt45=2;
             var LA45_0 = this.input.LA(1);
 
@@ -4694,8 +4698,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt45) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:225:18: xsdNillable
-                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdNillable_in_field1634);
+                    // ./grammars/AntlrThrift.g:227:18: xsdNillable
+                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdNillable_in_field1636);
                     xsdNillable140=this.xsdNillable();
 
                     this.state._fsp--;
@@ -4707,7 +4711,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:225:31: ( xsdAttributes )?
+            // ./grammars/AntlrThrift.g:227:31: ( xsdAttributes )?
             var alt46=2;
             var LA46_0 = this.input.LA(1);
 
@@ -4716,8 +4720,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt46) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:225:31: xsdAttributes
-                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdAttributes_in_field1637);
+                    // ./grammars/AntlrThrift.g:227:31: xsdAttributes
+                    this.pushFollow(AntlrThriftParser.FOLLOW_xsdAttributes_in_field1639);
                     xsdAttributes141=this.xsdAttributes();
 
                     this.state._fsp--;
@@ -4729,7 +4733,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:225:46: ( typeAnnotations )?
+            // ./grammars/AntlrThrift.g:227:46: ( typeAnnotations )?
             var alt47=2;
             var LA47_0 = this.input.LA(1);
 
@@ -4738,8 +4742,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt47) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:225:46: typeAnnotations
-                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_field1640);
+                    // ./grammars/AntlrThrift.g:227:46: typeAnnotations
+                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_field1642);
                     typeAnnotations142=this.typeAnnotations();
 
                     this.state._fsp--;
@@ -4751,7 +4755,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:226:5: ( commaOrSemicolon )?
+            // ./grammars/AntlrThrift.g:228:5: ( commaOrSemicolon )?
             var alt48=2;
             var LA48_0 = this.input.LA(1);
 
@@ -4760,8 +4764,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt48) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:226:5: commaOrSemicolon
-                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_field1647);
+                    // ./grammars/AntlrThrift.g:228:5: commaOrSemicolon
+                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_field1649);
                     commaOrSemicolon143=this.commaOrSemicolon();
 
                     this.state._fsp--;
@@ -4785,20 +4789,20 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 227:4: -> ^( FIELD ( fieldIdentifier )? ( fieldRequiredness )? fieldType IDENTIFIER ( fieldValue )? ( xsdOptional )? ( xsdNillable )? ( xsdAttributes )? ( typeAnnotations )? )
+            // 229:4: -> ^( FIELD ( fieldIdentifier )? ( fieldRequiredness )? fieldType IDENTIFIER ( fieldValue )? ( xsdOptional )? ( xsdNillable )? ( xsdAttributes )? ( typeAnnotations )? )
             {
-                // ./grammars/AntlrThrift.g:227:7: ^( FIELD ( fieldIdentifier )? ( fieldRequiredness )? fieldType IDENTIFIER ( fieldValue )? ( xsdOptional )? ( xsdNillable )? ( xsdAttributes )? ( typeAnnotations )? )
+                // ./grammars/AntlrThrift.g:229:7: ^( FIELD ( fieldIdentifier )? ( fieldRequiredness )? fieldType IDENTIFIER ( fieldValue )? ( xsdOptional )? ( xsdNillable )? ( xsdAttributes )? ( typeAnnotations )? )
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(FIELD, "FIELD"), root_1);
 
-                // ./grammars/AntlrThrift.g:227:15: ( fieldIdentifier )?
+                // ./grammars/AntlrThrift.g:229:15: ( fieldIdentifier )?
                 if ( stream_fieldIdentifier.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_fieldIdentifier.nextTree());
 
                 }
                 stream_fieldIdentifier.reset();
-                // ./grammars/AntlrThrift.g:227:32: ( fieldRequiredness )?
+                // ./grammars/AntlrThrift.g:229:32: ( fieldRequiredness )?
                 if ( stream_fieldRequiredness.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_fieldRequiredness.nextTree());
 
@@ -4806,31 +4810,31 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                 stream_fieldRequiredness.reset();
                 this.adaptor.addChild(root_1, stream_fieldType.nextTree());
                 this.adaptor.addChild(root_1, stream_IDENTIFIER.nextNode());
-                // ./grammars/AntlrThrift.g:227:72: ( fieldValue )?
+                // ./grammars/AntlrThrift.g:229:72: ( fieldValue )?
                 if ( stream_fieldValue.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_fieldValue.nextTree());
 
                 }
                 stream_fieldValue.reset();
-                // ./grammars/AntlrThrift.g:228:9: ( xsdOptional )?
+                // ./grammars/AntlrThrift.g:230:9: ( xsdOptional )?
                 if ( stream_xsdOptional.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_xsdOptional.nextTree());
 
                 }
                 stream_xsdOptional.reset();
-                // ./grammars/AntlrThrift.g:228:22: ( xsdNillable )?
+                // ./grammars/AntlrThrift.g:230:22: ( xsdNillable )?
                 if ( stream_xsdNillable.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_xsdNillable.nextTree());
 
                 }
                 stream_xsdNillable.reset();
-                // ./grammars/AntlrThrift.g:228:35: ( xsdAttributes )?
+                // ./grammars/AntlrThrift.g:230:35: ( xsdAttributes )?
                 if ( stream_xsdAttributes.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_xsdAttributes.nextTree());
 
                 }
                 stream_xsdAttributes.reset();
-                // ./grammars/AntlrThrift.g:228:50: ( typeAnnotations )?
+                // ./grammars/AntlrThrift.g:230:50: ( typeAnnotations )?
                 if ( stream_typeAnnotations.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_typeAnnotations.nextTree());
 
@@ -4876,7 +4880,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:230:1: fieldIdentifier : intConstant ':' -> intConstant ;
+    // ./grammars/AntlrThrift.g:232:1: fieldIdentifier : intConstant ':' -> intConstant ;
     // $ANTLR start "fieldIdentifier"
     fieldIdentifier: function() {
         var retval = new AntlrThriftParser.fieldIdentifier_return();
@@ -4891,15 +4895,15 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_95=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 95");
         var stream_intConstant=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule intConstant");
         try {
-            // ./grammars/AntlrThrift.g:230:16: ( intConstant ':' -> intConstant )
-            // ./grammars/AntlrThrift.g:231:3: intConstant ':'
-            this.pushFollow(AntlrThriftParser.FOLLOW_intConstant_in_fieldIdentifier1699);
+            // ./grammars/AntlrThrift.g:232:16: ( intConstant ':' -> intConstant )
+            // ./grammars/AntlrThrift.g:233:3: intConstant ':'
+            this.pushFollow(AntlrThriftParser.FOLLOW_intConstant_in_fieldIdentifier1701);
             intConstant144=this.intConstant();
 
             this.state._fsp--;
 
             stream_intConstant.add(intConstant144.getTree());
-            char_literal145=this.match(this.input,95,AntlrThriftParser.FOLLOW_95_in_fieldIdentifier1701);  
+            char_literal145=this.match(this.input,95,AntlrThriftParser.FOLLOW_95_in_fieldIdentifier1703);  
             stream_95.add(char_literal145);
 
 
@@ -4914,7 +4918,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 231:19: -> intConstant
+            // 233:19: -> intConstant
             {
                 this.adaptor.addChild(root_0, stream_intConstant.nextTree());
 
@@ -4954,7 +4958,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:233:1: fieldRequiredness : ( 'required' -> REQUIRED | 'optional' -> OPTIONAL );
+    // ./grammars/AntlrThrift.g:235:1: fieldRequiredness : ( 'required' -> REQUIRED | 'optional' -> OPTIONAL );
     // $ANTLR start "fieldRequiredness"
     fieldRequiredness: function() {
         var retval = new AntlrThriftParser.fieldRequiredness_return();
@@ -4971,7 +4975,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_110=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 110");
 
         try {
-            // ./grammars/AntlrThrift.g:233:18: ( 'required' -> REQUIRED | 'optional' -> OPTIONAL )
+            // ./grammars/AntlrThrift.g:235:18: ( 'required' -> REQUIRED | 'optional' -> OPTIONAL )
             var alt49=2;
             var LA49_0 = this.input.LA(1);
 
@@ -4989,8 +4993,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt49) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:234:3: 'required'
-                    string_literal146=this.match(this.input,109,AntlrThriftParser.FOLLOW_109_in_fieldRequiredness1714);  
+                    // ./grammars/AntlrThrift.g:236:3: 'required'
+                    string_literal146=this.match(this.input,109,AntlrThriftParser.FOLLOW_109_in_fieldRequiredness1716);  
                     stream_109.add(string_literal146);
 
 
@@ -5005,7 +5009,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 234:14: -> REQUIRED
+                    // 236:14: -> REQUIRED
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(REQUIRED, "REQUIRED"));
 
@@ -5015,8 +5019,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:235:3: 'optional'
-                    string_literal147=this.match(this.input,110,AntlrThriftParser.FOLLOW_110_in_fieldRequiredness1724);  
+                    // ./grammars/AntlrThrift.g:237:3: 'optional'
+                    string_literal147=this.match(this.input,110,AntlrThriftParser.FOLLOW_110_in_fieldRequiredness1726);  
                     stream_110.add(string_literal147);
 
 
@@ -5031,7 +5035,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 235:14: -> OPTIONAL
+                    // 237:14: -> OPTIONAL
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(OPTIONAL, "OPTIONAL"));
 
@@ -5073,7 +5077,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:237:1: fieldValue : '=' constValue -> DEFAULT constValue ;
+    // ./grammars/AntlrThrift.g:239:1: fieldValue : '=' constValue -> DEFAULT constValue ;
     // $ANTLR start "fieldValue"
     fieldValue: function() {
         var retval = new AntlrThriftParser.fieldValue_return();
@@ -5088,12 +5092,12 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_90=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 90");
         var stream_constValue=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule constValue");
         try {
-            // ./grammars/AntlrThrift.g:237:11: ( '=' constValue -> DEFAULT constValue )
-            // ./grammars/AntlrThrift.g:238:3: '=' constValue
-            char_literal148=this.match(this.input,90,AntlrThriftParser.FOLLOW_90_in_fieldValue1737);  
+            // ./grammars/AntlrThrift.g:239:11: ( '=' constValue -> DEFAULT constValue )
+            // ./grammars/AntlrThrift.g:240:3: '=' constValue
+            char_literal148=this.match(this.input,90,AntlrThriftParser.FOLLOW_90_in_fieldValue1739);  
             stream_90.add(char_literal148);
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_constValue_in_fieldValue1739);
+            this.pushFollow(AntlrThriftParser.FOLLOW_constValue_in_fieldValue1741);
             constValue149=this.constValue();
 
             this.state._fsp--;
@@ -5111,7 +5115,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 238:18: -> DEFAULT constValue
+            // 240:18: -> DEFAULT constValue
             {
                 this.adaptor.addChild(root_0, this.adaptor.create(DEFAULT, "DEFAULT"));
                 this.adaptor.addChild(root_0, stream_constValue.nextTree());
@@ -5152,7 +5156,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:240:1: functionType : ( 'void' -> VOID | fieldType );
+    // ./grammars/AntlrThrift.g:242:1: functionType : ( 'void' -> VOID | fieldType );
     // $ANTLR start "functionType"
     functionType: function() {
         var retval = new AntlrThriftParser.functionType_return();
@@ -5167,7 +5171,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_111=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 111");
 
         try {
-            // ./grammars/AntlrThrift.g:240:13: ( 'void' -> VOID | fieldType )
+            // ./grammars/AntlrThrift.g:242:13: ( 'void' -> VOID | fieldType )
             var alt50=2;
             var LA50_0 = this.input.LA(1);
 
@@ -5185,8 +5189,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt50) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:241:3: 'void'
-                    string_literal150=this.match(this.input,111,AntlrThriftParser.FOLLOW_111_in_functionType1754);  
+                    // ./grammars/AntlrThrift.g:243:3: 'void'
+                    string_literal150=this.match(this.input,111,AntlrThriftParser.FOLLOW_111_in_functionType1756);  
                     stream_111.add(string_literal150);
 
 
@@ -5201,7 +5205,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 241:10: -> VOID
+                    // 243:10: -> VOID
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(VOID, "VOID"));
 
@@ -5211,10 +5215,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:242:3: fieldType
+                    // ./grammars/AntlrThrift.g:244:3: fieldType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_functionType1764);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_functionType1766);
                     fieldType151=this.fieldType();
 
                     this.state._fsp--;
@@ -5256,7 +5260,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:244:1: fieldType : ( IDENTIFIER | baseType | containerType );
+    // ./grammars/AntlrThrift.g:246:1: fieldType : ( IDENTIFIER | baseType | containerType );
     // $ANTLR start "fieldType"
     fieldType: function() {
         var retval = new AntlrThriftParser.fieldType_return();
@@ -5271,7 +5275,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var IDENTIFIER152_tree=null;
 
         try {
-            // ./grammars/AntlrThrift.g:244:10: ( IDENTIFIER | baseType | containerType )
+            // ./grammars/AntlrThrift.g:246:10: ( IDENTIFIER | baseType | containerType )
             var alt51=3;
             switch ( this.input.LA(1) ) {
             case IDENTIFIER:
@@ -5302,10 +5306,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             switch (alt51) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:245:3: IDENTIFIER
+                    // ./grammars/AntlrThrift.g:247:3: IDENTIFIER
                     root_0 = this.adaptor.nil();
 
-                    IDENTIFIER152=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_fieldType1773); 
+                    IDENTIFIER152=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_fieldType1775); 
                     IDENTIFIER152_tree = this.adaptor.create(IDENTIFIER152);
                     this.adaptor.addChild(root_0, IDENTIFIER152_tree);
 
@@ -5313,10 +5317,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:246:3: baseType
+                    // ./grammars/AntlrThrift.g:248:3: baseType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_baseType_in_fieldType1779);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_baseType_in_fieldType1781);
                     baseType153=this.baseType();
 
                     this.state._fsp--;
@@ -5326,10 +5330,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 3 :
-                    // ./grammars/AntlrThrift.g:247:3: containerType
+                    // ./grammars/AntlrThrift.g:249:3: containerType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_containerType_in_fieldType1785);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_containerType_in_fieldType1787);
                     containerType154=this.containerType();
 
                     this.state._fsp--;
@@ -5371,7 +5375,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:249:1: baseType : simpleBaseType ( typeAnnotations )? ;
+    // ./grammars/AntlrThrift.g:251:1: baseType : simpleBaseType ( typeAnnotations )? ;
     // $ANTLR start "baseType"
     baseType: function() {
         var retval = new AntlrThriftParser.baseType_return();
@@ -5384,17 +5388,17 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
 
         try {
-            // ./grammars/AntlrThrift.g:249:9: ( simpleBaseType ( typeAnnotations )? )
-            // ./grammars/AntlrThrift.g:250:3: simpleBaseType ( typeAnnotations )?
+            // ./grammars/AntlrThrift.g:251:9: ( simpleBaseType ( typeAnnotations )? )
+            // ./grammars/AntlrThrift.g:252:3: simpleBaseType ( typeAnnotations )?
             root_0 = this.adaptor.nil();
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_simpleBaseType_in_baseType1794);
+            this.pushFollow(AntlrThriftParser.FOLLOW_simpleBaseType_in_baseType1796);
             simpleBaseType155=this.simpleBaseType();
 
             this.state._fsp--;
 
             this.adaptor.addChild(root_0, simpleBaseType155.getTree());
-            // ./grammars/AntlrThrift.g:250:18: ( typeAnnotations )?
+            // ./grammars/AntlrThrift.g:252:18: ( typeAnnotations )?
             var alt52=2;
             var LA52_0 = this.input.LA(1);
 
@@ -5403,8 +5407,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt52) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:250:18: typeAnnotations
-                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_baseType1796);
+                    // ./grammars/AntlrThrift.g:252:18: typeAnnotations
+                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_baseType1798);
                     typeAnnotations156=this.typeAnnotations();
 
                     this.state._fsp--;
@@ -5450,7 +5454,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:252:1: simpleBaseType : ( 'string' -> STRING | 'binary' -> BINARY | 'slist' -> SLIST | 'bool' -> BOOL | 'byte' -> BYTE | 'i16' -> I16 | 'i32' -> I32 | 'i64' -> I64 | 'double' -> DOUBLE );
+    // ./grammars/AntlrThrift.g:254:1: simpleBaseType : ( 'string' -> STRING | 'binary' -> BINARY | 'slist' -> SLIST | 'bool' -> BOOL | 'byte' -> BYTE | 'i16' -> I16 | 'i32' -> I32 | 'i64' -> I64 | 'double' -> DOUBLE );
     // $ANTLR start "simpleBaseType"
     simpleBaseType: function() {
         var retval = new AntlrThriftParser.simpleBaseType_return();
@@ -5488,7 +5492,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_119=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 119");
 
         try {
-            // ./grammars/AntlrThrift.g:252:15: ( 'string' -> STRING | 'binary' -> BINARY | 'slist' -> SLIST | 'bool' -> BOOL | 'byte' -> BYTE | 'i16' -> I16 | 'i32' -> I32 | 'i64' -> I64 | 'double' -> DOUBLE )
+            // ./grammars/AntlrThrift.g:254:15: ( 'string' -> STRING | 'binary' -> BINARY | 'slist' -> SLIST | 'bool' -> BOOL | 'byte' -> BYTE | 'i16' -> I16 | 'i32' -> I32 | 'i64' -> I64 | 'double' -> DOUBLE )
             var alt53=9;
             switch ( this.input.LA(1) ) {
             case 112:
@@ -5527,8 +5531,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             switch (alt53) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:253:3: 'string'
-                    string_literal157=this.match(this.input,112,AntlrThriftParser.FOLLOW_112_in_simpleBaseType1806);  
+                    // ./grammars/AntlrThrift.g:255:3: 'string'
+                    string_literal157=this.match(this.input,112,AntlrThriftParser.FOLLOW_112_in_simpleBaseType1808);  
                     stream_112.add(string_literal157);
 
 
@@ -5543,7 +5547,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 253:12: -> STRING
+                    // 255:12: -> STRING
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(STRING, "STRING"));
 
@@ -5553,8 +5557,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:254:3: 'binary'
-                    string_literal158=this.match(this.input,113,AntlrThriftParser.FOLLOW_113_in_simpleBaseType1816);  
+                    // ./grammars/AntlrThrift.g:256:3: 'binary'
+                    string_literal158=this.match(this.input,113,AntlrThriftParser.FOLLOW_113_in_simpleBaseType1818);  
                     stream_113.add(string_literal158);
 
 
@@ -5569,7 +5573,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 254:12: -> BINARY
+                    // 256:12: -> BINARY
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(BINARY, "BINARY"));
 
@@ -5579,8 +5583,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 3 :
-                    // ./grammars/AntlrThrift.g:255:3: 'slist'
-                    string_literal159=this.match(this.input,114,AntlrThriftParser.FOLLOW_114_in_simpleBaseType1826);  
+                    // ./grammars/AntlrThrift.g:257:3: 'slist'
+                    string_literal159=this.match(this.input,114,AntlrThriftParser.FOLLOW_114_in_simpleBaseType1828);  
                     stream_114.add(string_literal159);
 
 
@@ -5595,7 +5599,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 255:12: -> SLIST
+                    // 257:12: -> SLIST
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(SLIST, "SLIST"));
 
@@ -5605,8 +5609,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 4 :
-                    // ./grammars/AntlrThrift.g:256:3: 'bool'
-                    string_literal160=this.match(this.input,115,AntlrThriftParser.FOLLOW_115_in_simpleBaseType1838);  
+                    // ./grammars/AntlrThrift.g:258:3: 'bool'
+                    string_literal160=this.match(this.input,115,AntlrThriftParser.FOLLOW_115_in_simpleBaseType1840);  
                     stream_115.add(string_literal160);
 
 
@@ -5621,7 +5625,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 256:12: -> BOOL
+                    // 258:12: -> BOOL
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(BOOL, "BOOL"));
 
@@ -5631,8 +5635,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 5 :
-                    // ./grammars/AntlrThrift.g:257:3: 'byte'
-                    string_literal161=this.match(this.input,116,AntlrThriftParser.FOLLOW_116_in_simpleBaseType1852);  
+                    // ./grammars/AntlrThrift.g:259:3: 'byte'
+                    string_literal161=this.match(this.input,116,AntlrThriftParser.FOLLOW_116_in_simpleBaseType1854);  
                     stream_116.add(string_literal161);
 
 
@@ -5647,7 +5651,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 257:12: -> BYTE
+                    // 259:12: -> BYTE
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(BYTE, "BYTE"));
 
@@ -5657,8 +5661,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 6 :
-                    // ./grammars/AntlrThrift.g:258:3: 'i16'
-                    string_literal162=this.match(this.input,117,AntlrThriftParser.FOLLOW_117_in_simpleBaseType1866);  
+                    // ./grammars/AntlrThrift.g:260:3: 'i16'
+                    string_literal162=this.match(this.input,117,AntlrThriftParser.FOLLOW_117_in_simpleBaseType1868);  
                     stream_117.add(string_literal162);
 
 
@@ -5673,7 +5677,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 258:12: -> I16
+                    // 260:12: -> I16
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(I16, "I16"));
 
@@ -5683,8 +5687,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 7 :
-                    // ./grammars/AntlrThrift.g:259:3: 'i32'
-                    string_literal163=this.match(this.input,118,AntlrThriftParser.FOLLOW_118_in_simpleBaseType1882);  
+                    // ./grammars/AntlrThrift.g:261:3: 'i32'
+                    string_literal163=this.match(this.input,118,AntlrThriftParser.FOLLOW_118_in_simpleBaseType1884);  
                     stream_118.add(string_literal163);
 
 
@@ -5699,7 +5703,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 259:12: -> I32
+                    // 261:12: -> I32
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(I32, "I32"));
 
@@ -5709,8 +5713,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 8 :
-                    // ./grammars/AntlrThrift.g:260:3: 'i64'
-                    string_literal164=this.match(this.input,119,AntlrThriftParser.FOLLOW_119_in_simpleBaseType1898);  
+                    // ./grammars/AntlrThrift.g:262:3: 'i64'
+                    string_literal164=this.match(this.input,119,AntlrThriftParser.FOLLOW_119_in_simpleBaseType1900);  
                     stream_119.add(string_literal164);
 
 
@@ -5725,7 +5729,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 260:12: -> I64
+                    // 262:12: -> I64
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(I64, "I64"));
 
@@ -5735,8 +5739,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 9 :
-                    // ./grammars/AntlrThrift.g:261:3: 'double'
-                    string_literal165=this.match(this.input,120,AntlrThriftParser.FOLLOW_120_in_simpleBaseType1914);  
+                    // ./grammars/AntlrThrift.g:263:3: 'double'
+                    string_literal165=this.match(this.input,120,AntlrThriftParser.FOLLOW_120_in_simpleBaseType1916);  
                     stream_120.add(string_literal165);
 
 
@@ -5751,7 +5755,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                     var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
                     root_0 = this.adaptor.nil();
-                    // 261:12: -> DOUBLE
+                    // 263:12: -> DOUBLE
                     {
                         this.adaptor.addChild(root_0, this.adaptor.create(DOUBLE, "DOUBLE"));
 
@@ -5793,7 +5797,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:263:1: containerType : simpleContainerType ( typeAnnotations )? ;
+    // ./grammars/AntlrThrift.g:265:1: containerType : simpleContainerType ( typeAnnotations )? ;
     // $ANTLR start "containerType"
     containerType: function() {
         var retval = new AntlrThriftParser.containerType_return();
@@ -5806,17 +5810,17 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
 
         try {
-            // ./grammars/AntlrThrift.g:263:14: ( simpleContainerType ( typeAnnotations )? )
-            // ./grammars/AntlrThrift.g:264:3: simpleContainerType ( typeAnnotations )?
+            // ./grammars/AntlrThrift.g:265:14: ( simpleContainerType ( typeAnnotations )? )
+            // ./grammars/AntlrThrift.g:266:3: simpleContainerType ( typeAnnotations )?
             root_0 = this.adaptor.nil();
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_simpleContainerType_in_containerType1927);
+            this.pushFollow(AntlrThriftParser.FOLLOW_simpleContainerType_in_containerType1929);
             simpleContainerType166=this.simpleContainerType();
 
             this.state._fsp--;
 
             this.adaptor.addChild(root_0, simpleContainerType166.getTree());
-            // ./grammars/AntlrThrift.g:264:23: ( typeAnnotations )?
+            // ./grammars/AntlrThrift.g:266:23: ( typeAnnotations )?
             var alt54=2;
             var LA54_0 = this.input.LA(1);
 
@@ -5825,8 +5829,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt54) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:264:23: typeAnnotations
-                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_containerType1929);
+                    // ./grammars/AntlrThrift.g:266:23: typeAnnotations
+                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotations_in_containerType1931);
                     typeAnnotations167=this.typeAnnotations();
 
                     this.state._fsp--;
@@ -5872,7 +5876,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:266:1: simpleContainerType : ( mapType | setType | listType );
+    // ./grammars/AntlrThrift.g:268:1: simpleContainerType : ( mapType | setType | listType );
     // $ANTLR start "simpleContainerType"
     simpleContainerType: function() {
         var retval = new AntlrThriftParser.simpleContainerType_return();
@@ -5886,7 +5890,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
 
         try {
-            // ./grammars/AntlrThrift.g:266:20: ( mapType | setType | listType )
+            // ./grammars/AntlrThrift.g:268:20: ( mapType | setType | listType )
             var alt55=3;
             switch ( this.input.LA(1) ) {
             case 121:
@@ -5907,10 +5911,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             switch (alt55) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:267:3: mapType
+                    // ./grammars/AntlrThrift.g:269:3: mapType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_mapType_in_simpleContainerType1939);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_mapType_in_simpleContainerType1941);
                     mapType168=this.mapType();
 
                     this.state._fsp--;
@@ -5920,10 +5924,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:267:13: setType
+                    // ./grammars/AntlrThrift.g:269:13: setType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_setType_in_simpleContainerType1943);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_setType_in_simpleContainerType1945);
                     setType169=this.setType();
 
                     this.state._fsp--;
@@ -5933,10 +5937,10 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                     break;
                 case 3 :
-                    // ./grammars/AntlrThrift.g:267:23: listType
+                    // ./grammars/AntlrThrift.g:269:23: listType
                     root_0 = this.adaptor.nil();
 
-                    this.pushFollow(AntlrThriftParser.FOLLOW_listType_in_simpleContainerType1947);
+                    this.pushFollow(AntlrThriftParser.FOLLOW_listType_in_simpleContainerType1949);
                     listType170=this.listType();
 
                     this.state._fsp--;
@@ -5978,7 +5982,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:269:1: mapType : 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>' -> ^( MAP ( cppType )? $ft1 $ft2) ;
+    // ./grammars/AntlrThrift.g:271:1: mapType : 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>' -> ^( MAP ( cppType )? $ft1 $ft2) ;
     // $ANTLR start "mapType"
     mapType: function() {
         var retval = new AntlrThriftParser.mapType_return();
@@ -6005,12 +6009,12 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_fieldType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule fieldType");
         var stream_cppType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule cppType");
         try {
-            // ./grammars/AntlrThrift.g:269:8: ( 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>' -> ^( MAP ( cppType )? $ft1 $ft2) )
-            // ./grammars/AntlrThrift.g:270:3: 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>'
-            string_literal171=this.match(this.input,121,AntlrThriftParser.FOLLOW_121_in_mapType1956);  
+            // ./grammars/AntlrThrift.g:271:8: ( 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>' -> ^( MAP ( cppType )? $ft1 $ft2) )
+            // ./grammars/AntlrThrift.g:272:3: 'map' ( cppType )? '<' ft1= fieldType ',' ft2= fieldType '>'
+            string_literal171=this.match(this.input,121,AntlrThriftParser.FOLLOW_121_in_mapType1958);  
             stream_121.add(string_literal171);
 
-            // ./grammars/AntlrThrift.g:270:9: ( cppType )?
+            // ./grammars/AntlrThrift.g:272:9: ( cppType )?
             var alt56=2;
             var LA56_0 = this.input.LA(1);
 
@@ -6019,8 +6023,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt56) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:270:9: cppType
-                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_mapType1958);
+                    // ./grammars/AntlrThrift.g:272:9: cppType
+                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_mapType1960);
                     cppType172=this.cppType();
 
                     this.state._fsp--;
@@ -6032,25 +6036,25 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            char_literal173=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_mapType1961);  
+            char_literal173=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_mapType1963);  
             stream_122.add(char_literal173);
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_mapType1965);
+            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_mapType1967);
             ft1=this.fieldType();
 
             this.state._fsp--;
 
             stream_fieldType.add(ft1.getTree());
-            char_literal174=this.match(this.input,85,AntlrThriftParser.FOLLOW_85_in_mapType1967);  
+            char_literal174=this.match(this.input,85,AntlrThriftParser.FOLLOW_85_in_mapType1969);  
             stream_85.add(char_literal174);
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_mapType1971);
+            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_mapType1973);
             ft2=this.fieldType();
 
             this.state._fsp--;
 
             stream_fieldType.add(ft2.getTree());
-            char_literal175=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_mapType1973);  
+            char_literal175=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_mapType1975);  
             stream_123.add(char_literal175);
 
 
@@ -6067,14 +6071,14 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_ft2=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token ft2",ft2!=null?ft2.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 270:58: -> ^( MAP ( cppType )? $ft1 $ft2)
+            // 272:58: -> ^( MAP ( cppType )? $ft1 $ft2)
             {
-                // ./grammars/AntlrThrift.g:270:61: ^( MAP ( cppType )? $ft1 $ft2)
+                // ./grammars/AntlrThrift.g:272:61: ^( MAP ( cppType )? $ft1 $ft2)
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(MAP, "MAP"), root_1);
 
-                // ./grammars/AntlrThrift.g:270:67: ( cppType )?
+                // ./grammars/AntlrThrift.g:272:67: ( cppType )?
                 if ( stream_cppType.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_cppType.nextTree());
 
@@ -6122,7 +6126,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:272:1: setType : 'set' ( cppType )? '<' ft= fieldType '>' -> ^( SET ( cppType )? $ft) ;
+    // ./grammars/AntlrThrift.g:274:1: setType : 'set' ( cppType )? '<' ft= fieldType '>' -> ^( SET ( cppType )? $ft) ;
     // $ANTLR start "setType"
     setType: function() {
         var retval = new AntlrThriftParser.setType_return();
@@ -6145,12 +6149,12 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_fieldType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule fieldType");
         var stream_cppType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule cppType");
         try {
-            // ./grammars/AntlrThrift.g:272:8: ( 'set' ( cppType )? '<' ft= fieldType '>' -> ^( SET ( cppType )? $ft) )
-            // ./grammars/AntlrThrift.g:273:3: 'set' ( cppType )? '<' ft= fieldType '>'
-            string_literal176=this.match(this.input,124,AntlrThriftParser.FOLLOW_124_in_setType1997);  
+            // ./grammars/AntlrThrift.g:274:8: ( 'set' ( cppType )? '<' ft= fieldType '>' -> ^( SET ( cppType )? $ft) )
+            // ./grammars/AntlrThrift.g:275:3: 'set' ( cppType )? '<' ft= fieldType '>'
+            string_literal176=this.match(this.input,124,AntlrThriftParser.FOLLOW_124_in_setType1999);  
             stream_124.add(string_literal176);
 
-            // ./grammars/AntlrThrift.g:273:9: ( cppType )?
+            // ./grammars/AntlrThrift.g:275:9: ( cppType )?
             var alt57=2;
             var LA57_0 = this.input.LA(1);
 
@@ -6159,8 +6163,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt57) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:273:9: cppType
-                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_setType1999);
+                    // ./grammars/AntlrThrift.g:275:9: cppType
+                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_setType2001);
                     cppType177=this.cppType();
 
                     this.state._fsp--;
@@ -6172,16 +6176,16 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
             }
 
-            char_literal178=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_setType2002);  
+            char_literal178=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_setType2004);  
             stream_122.add(char_literal178);
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_setType2006);
+            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_setType2008);
             ft=this.fieldType();
 
             this.state._fsp--;
 
             stream_fieldType.add(ft.getTree());
-            char_literal179=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_setType2008);  
+            char_literal179=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_setType2010);  
             stream_123.add(char_literal179);
 
 
@@ -6197,14 +6201,14 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_ft=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token ft",ft!=null?ft.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 273:39: -> ^( SET ( cppType )? $ft)
+            // 275:39: -> ^( SET ( cppType )? $ft)
             {
-                // ./grammars/AntlrThrift.g:273:42: ^( SET ( cppType )? $ft)
+                // ./grammars/AntlrThrift.g:275:42: ^( SET ( cppType )? $ft)
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(SET, "SET"), root_1);
 
-                // ./grammars/AntlrThrift.g:273:48: ( cppType )?
+                // ./grammars/AntlrThrift.g:275:48: ( cppType )?
                 if ( stream_cppType.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_cppType.nextTree());
 
@@ -6251,7 +6255,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:279:1: listType : 'list' '<' ft= fieldType '>' ( cppType )? -> ^( LIST ( cppType )? $ft) ;
+    // ./grammars/AntlrThrift.g:281:1: listType : 'list' '<' ft= fieldType '>' ( cppType )? -> ^( LIST ( cppType )? $ft) ;
     // $ANTLR start "listType"
     listType: function() {
         var retval = new AntlrThriftParser.listType_return();
@@ -6274,24 +6278,24 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_fieldType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule fieldType");
         var stream_cppType=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule cppType");
         try {
-            // ./grammars/AntlrThrift.g:279:9: ( 'list' '<' ft= fieldType '>' ( cppType )? -> ^( LIST ( cppType )? $ft) )
-            // ./grammars/AntlrThrift.g:280:3: 'list' '<' ft= fieldType '>' ( cppType )?
-            string_literal180=this.match(this.input,125,AntlrThriftParser.FOLLOW_125_in_listType2033);  
+            // ./grammars/AntlrThrift.g:281:9: ( 'list' '<' ft= fieldType '>' ( cppType )? -> ^( LIST ( cppType )? $ft) )
+            // ./grammars/AntlrThrift.g:282:3: 'list' '<' ft= fieldType '>' ( cppType )?
+            string_literal180=this.match(this.input,125,AntlrThriftParser.FOLLOW_125_in_listType2035);  
             stream_125.add(string_literal180);
 
-            char_literal181=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_listType2035);  
+            char_literal181=this.match(this.input,122,AntlrThriftParser.FOLLOW_122_in_listType2037);  
             stream_122.add(char_literal181);
 
-            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_listType2039);
+            this.pushFollow(AntlrThriftParser.FOLLOW_fieldType_in_listType2041);
             ft=this.fieldType();
 
             this.state._fsp--;
 
             stream_fieldType.add(ft.getTree());
-            char_literal182=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_listType2041);  
+            char_literal182=this.match(this.input,123,AntlrThriftParser.FOLLOW_123_in_listType2043);  
             stream_123.add(char_literal182);
 
-            // ./grammars/AntlrThrift.g:280:31: ( cppType )?
+            // ./grammars/AntlrThrift.g:282:31: ( cppType )?
             var alt58=2;
             var LA58_0 = this.input.LA(1);
 
@@ -6300,8 +6304,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt58) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:280:31: cppType
-                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_listType2043);
+                    // ./grammars/AntlrThrift.g:282:31: cppType
+                    this.pushFollow(AntlrThriftParser.FOLLOW_cppType_in_listType2045);
                     cppType183=this.cppType();
 
                     this.state._fsp--;
@@ -6326,14 +6330,14 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_ft=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token ft",ft!=null?ft.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 280:40: -> ^( LIST ( cppType )? $ft)
+            // 282:40: -> ^( LIST ( cppType )? $ft)
             {
-                // ./grammars/AntlrThrift.g:280:43: ^( LIST ( cppType )? $ft)
+                // ./grammars/AntlrThrift.g:282:43: ^( LIST ( cppType )? $ft)
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(LIST, "LIST"), root_1);
 
-                // ./grammars/AntlrThrift.g:280:50: ( cppType )?
+                // ./grammars/AntlrThrift.g:282:50: ( cppType )?
                 if ( stream_cppType.hasNext() ) {
                     this.adaptor.addChild(root_1, stream_cppType.nextTree());
 
@@ -6380,7 +6384,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:282:1: cppType : 'cpp_type' i= LITERAL -> ^( CPP_TYPE $i) ;
+    // ./grammars/AntlrThrift.g:284:1: cppType : 'cpp_type' i= LITERAL -> ^( CPP_TYPE $i) ;
     // $ANTLR start "cppType"
     cppType: function() {
         var retval = new AntlrThriftParser.cppType_return();
@@ -6397,12 +6401,12 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_LITERAL=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token LITERAL");
 
         try {
-            // ./grammars/AntlrThrift.g:282:8: ( 'cpp_type' i= LITERAL -> ^( CPP_TYPE $i) )
-            // ./grammars/AntlrThrift.g:283:3: 'cpp_type' i= LITERAL
-            string_literal184=this.match(this.input,126,AntlrThriftParser.FOLLOW_126_in_cppType2065);  
+            // ./grammars/AntlrThrift.g:284:8: ( 'cpp_type' i= LITERAL -> ^( CPP_TYPE $i) )
+            // ./grammars/AntlrThrift.g:285:3: 'cpp_type' i= LITERAL
+            string_literal184=this.match(this.input,126,AntlrThriftParser.FOLLOW_126_in_cppType2067);  
             stream_126.add(string_literal184);
 
-            i=this.match(this.input,LITERAL,AntlrThriftParser.FOLLOW_LITERAL_in_cppType2069);  
+            i=this.match(this.input,LITERAL,AntlrThriftParser.FOLLOW_LITERAL_in_cppType2071);  
             stream_LITERAL.add(i);
 
 
@@ -6418,9 +6422,9 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 283:24: -> ^( CPP_TYPE $i)
+            // 285:24: -> ^( CPP_TYPE $i)
             {
-                // ./grammars/AntlrThrift.g:283:27: ^( CPP_TYPE $i)
+                // ./grammars/AntlrThrift.g:285:27: ^( CPP_TYPE $i)
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(CPP_TYPE, "CPP_TYPE"), root_1);
@@ -6466,7 +6470,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:285:1: typeAnnotations : '(' ( typeAnnotation )* ')' -> ( typeAnnotation )* ;
+    // ./grammars/AntlrThrift.g:287:1: typeAnnotations : '(' ( typeAnnotation )* ')' -> ( typeAnnotation )* ;
     // $ANTLR start "typeAnnotations"
     typeAnnotations: function() {
         var retval = new AntlrThriftParser.typeAnnotations_return();
@@ -6484,12 +6488,12 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_105=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token 105");
         var stream_typeAnnotation=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule typeAnnotation");
         try {
-            // ./grammars/AntlrThrift.g:285:16: ( '(' ( typeAnnotation )* ')' -> ( typeAnnotation )* )
-            // ./grammars/AntlrThrift.g:286:3: '(' ( typeAnnotation )* ')'
-            char_literal185=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_typeAnnotations2087);  
+            // ./grammars/AntlrThrift.g:287:16: ( '(' ( typeAnnotation )* ')' -> ( typeAnnotation )* )
+            // ./grammars/AntlrThrift.g:288:3: '(' ( typeAnnotation )* ')'
+            char_literal185=this.match(this.input,105,AntlrThriftParser.FOLLOW_105_in_typeAnnotations2089);  
             stream_105.add(char_literal185);
 
-            // ./grammars/AntlrThrift.g:286:7: ( typeAnnotation )*
+            // ./grammars/AntlrThrift.g:288:7: ( typeAnnotation )*
             loop59:
             do {
                 var alt59=2;
@@ -6502,8 +6506,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
 
                 switch (alt59) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:286:7: typeAnnotation
-                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotation_in_typeAnnotations2089);
+                    // ./grammars/AntlrThrift.g:288:7: typeAnnotation
+                    this.pushFollow(AntlrThriftParser.FOLLOW_typeAnnotation_in_typeAnnotations2091);
                     typeAnnotation186=this.typeAnnotation();
 
                     this.state._fsp--;
@@ -6518,7 +6522,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
                 }
             } while (true);
 
-            char_literal187=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_typeAnnotations2092);  
+            char_literal187=this.match(this.input,106,AntlrThriftParser.FOLLOW_106_in_typeAnnotations2094);  
             stream_106.add(char_literal187);
 
 
@@ -6533,9 +6537,9 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 286:27: -> ( typeAnnotation )*
+            // 288:27: -> ( typeAnnotation )*
             {
-                // ./grammars/AntlrThrift.g:286:30: ( typeAnnotation )*
+                // ./grammars/AntlrThrift.g:288:30: ( typeAnnotation )*
                 while ( stream_typeAnnotation.hasNext() ) {
                     this.adaptor.addChild(root_0, stream_typeAnnotation.nextTree());
 
@@ -6578,7 +6582,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:288:1: typeAnnotation : i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )? -> ^( TYPE_ANNOTATION $i $l) ;
+    // ./grammars/AntlrThrift.g:290:1: typeAnnotation : i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )? -> ^( TYPE_ANNOTATION $i $l) ;
     // $ANTLR start "typeAnnotation"
     typeAnnotation: function() {
         var retval = new AntlrThriftParser.typeAnnotation_return();
@@ -6599,18 +6603,18 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var stream_IDENTIFIER=new org.antlr.runtime.tree.RewriteRuleTokenStream(this.adaptor,"token IDENTIFIER");
         var stream_commaOrSemicolon=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"rule commaOrSemicolon");
         try {
-            // ./grammars/AntlrThrift.g:288:15: (i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )? -> ^( TYPE_ANNOTATION $i $l) )
-            // ./grammars/AntlrThrift.g:289:3: i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )?
-            i=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_typeAnnotation2108);  
+            // ./grammars/AntlrThrift.g:290:15: (i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )? -> ^( TYPE_ANNOTATION $i $l) )
+            // ./grammars/AntlrThrift.g:291:3: i= IDENTIFIER '=' l= LITERAL ( commaOrSemicolon )?
+            i=this.match(this.input,IDENTIFIER,AntlrThriftParser.FOLLOW_IDENTIFIER_in_typeAnnotation2110);  
             stream_IDENTIFIER.add(i);
 
-            char_literal188=this.match(this.input,90,AntlrThriftParser.FOLLOW_90_in_typeAnnotation2110);  
+            char_literal188=this.match(this.input,90,AntlrThriftParser.FOLLOW_90_in_typeAnnotation2112);  
             stream_90.add(char_literal188);
 
-            l=this.match(this.input,LITERAL,AntlrThriftParser.FOLLOW_LITERAL_in_typeAnnotation2114);  
+            l=this.match(this.input,LITERAL,AntlrThriftParser.FOLLOW_LITERAL_in_typeAnnotation2116);  
             stream_LITERAL.add(l);
 
-            // ./grammars/AntlrThrift.g:289:30: ( commaOrSemicolon )?
+            // ./grammars/AntlrThrift.g:291:30: ( commaOrSemicolon )?
             var alt60=2;
             var LA60_0 = this.input.LA(1);
 
@@ -6619,8 +6623,8 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             }
             switch (alt60) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:289:30: commaOrSemicolon
-                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_typeAnnotation2116);
+                    // ./grammars/AntlrThrift.g:291:30: commaOrSemicolon
+                    this.pushFollow(AntlrThriftParser.FOLLOW_commaOrSemicolon_in_typeAnnotation2118);
                     commaOrSemicolon189=this.commaOrSemicolon();
 
                     this.state._fsp--;
@@ -6646,9 +6650,9 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
             var stream_retval=new org.antlr.runtime.tree.RewriteRuleSubtreeStream(this.adaptor,"token retval",retval!=null?retval.tree:null);
 
             root_0 = this.adaptor.nil();
-            // 289:48: -> ^( TYPE_ANNOTATION $i $l)
+            // 291:48: -> ^( TYPE_ANNOTATION $i $l)
             {
-                // ./grammars/AntlrThrift.g:289:51: ^( TYPE_ANNOTATION $i $l)
+                // ./grammars/AntlrThrift.g:291:51: ^( TYPE_ANNOTATION $i $l)
                 {
                 var root_1 = this.adaptor.nil();
                 root_1 = this.adaptor.becomeRoot(this.adaptor.create(TYPE_ANNOTATION, "TYPE_ANNOTATION"), root_1);
@@ -6695,7 +6699,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         return;
     })(),
 
-    // ./grammars/AntlrThrift.g:291:1: intConstant : ( INTCONSTANT | HEXCONSTANT );
+    // ./grammars/AntlrThrift.g:293:1: intConstant : ( INTCONSTANT | HEXCONSTANT );
     // $ANTLR start "intConstant"
     intConstant: function() {
         var retval = new AntlrThriftParser.intConstant_return();
@@ -6708,7 +6712,7 @@ org.antlr.lang.augmentObject(AntlrThriftParser.prototype, {
         var set190_tree=null;
 
         try {
-            // ./grammars/AntlrThrift.g:291:12: ( INTCONSTANT | HEXCONSTANT )
+            // ./grammars/AntlrThrift.g:293:12: ( INTCONSTANT | HEXCONSTANT )
             // ./grammars/AntlrThrift.g:
             root_0 = this.adaptor.nil();
 
@@ -6965,85 +6969,85 @@ org.antlr.lang.augmentObject(AntlrThriftParser, {
     FOLLOW_function_in_service1457: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x02000000, 0x33FF8800]),
     FOLLOW_89_in_service1460: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x00000200]),
     FOLLOW_typeAnnotations_in_service1462: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_104_in_extends1494: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
-    FOLLOW_IDENTIFIER_in_extends1496: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_oneway_in_function1513: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF8800]),
-    FOLLOW_functionType_in_function1516: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
-    FOLLOW_IDENTIFIER_in_function1520: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x00000200]),
-    FOLLOW_105_in_function1524: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
-    FOLLOW_field_in_function1526: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
-    FOLLOW_106_in_function1529: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00001200]),
-    FOLLOW_throwz_in_function1531: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000200]),
-    FOLLOW_typeAnnotations_in_function1534: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
-    FOLLOW_commaOrSemicolon_in_function1537: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_107_in_oneway1573: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_108_in_throwz1586: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x00000200]),
-    FOLLOW_105_in_throwz1588: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
-    FOLLOW_field_in_throwz1590: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
-    FOLLOW_106_in_throwz1593: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_fieldIdentifier_in_field1611: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF6000]),
-    FOLLOW_fieldRequiredness_in_field1614: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
-    FOLLOW_fieldType_in_field1617: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
-    FOLLOW_IDENTIFIER_in_field1621: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x04600000, 0x00000238]),
-    FOLLOW_fieldValue_in_field1624: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000238]),
-    FOLLOW_xsdOptional_in_field1631: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000230]),
-    FOLLOW_xsdNillable_in_field1634: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000220]),
-    FOLLOW_xsdAttributes_in_field1637: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000200]),
-    FOLLOW_typeAnnotations_in_field1640: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
-    FOLLOW_commaOrSemicolon_in_field1647: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_intConstant_in_fieldIdentifier1699: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x80000000, 0x00000000]),
-    FOLLOW_95_in_fieldIdentifier1701: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_109_in_fieldRequiredness1714: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_110_in_fieldRequiredness1724: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_90_in_fieldValue1737: new org.antlr.runtime.BitSet([0x00000000, 0xD8000000,0x21000001, 0x00000000]),
-    FOLLOW_constValue_in_fieldValue1739: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_111_in_functionType1754: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_fieldType_in_functionType1764: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_IDENTIFIER_in_fieldType1773: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_baseType_in_fieldType1779: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_containerType_in_fieldType1785: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_simpleBaseType_in_baseType1794: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x00000200]),
-    FOLLOW_typeAnnotations_in_baseType1796: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_112_in_simpleBaseType1806: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_113_in_simpleBaseType1816: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_114_in_simpleBaseType1826: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_115_in_simpleBaseType1838: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_116_in_simpleBaseType1852: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_117_in_simpleBaseType1866: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_118_in_simpleBaseType1882: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_119_in_simpleBaseType1898: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_120_in_simpleBaseType1914: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_simpleContainerType_in_containerType1927: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x00000200]),
-    FOLLOW_typeAnnotations_in_containerType1929: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_mapType_in_simpleContainerType1939: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_setType_in_simpleContainerType1943: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_listType_in_simpleContainerType1947: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_121_in_mapType1956: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x44000000]),
-    FOLLOW_cppType_in_mapType1958: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
-    FOLLOW_122_in_mapType1961: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
-    FOLLOW_fieldType_in_mapType1965: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00200000, 0x00000000]),
-    FOLLOW_85_in_mapType1967: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
-    FOLLOW_fieldType_in_mapType1971: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
-    FOLLOW_123_in_mapType1973: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_124_in_setType1997: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x44000000]),
-    FOLLOW_cppType_in_setType1999: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
-    FOLLOW_122_in_setType2002: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
-    FOLLOW_fieldType_in_setType2006: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
-    FOLLOW_123_in_setType2008: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_125_in_listType2033: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
-    FOLLOW_122_in_listType2035: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
-    FOLLOW_fieldType_in_listType2039: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
-    FOLLOW_123_in_listType2041: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x40000000]),
-    FOLLOW_cppType_in_listType2043: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_126_in_cppType2065: new org.antlr.runtime.BitSet([0x00000000, 0x08000000]),
-    FOLLOW_LITERAL_in_cppType2069: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_105_in_typeAnnotations2087: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x00000400]),
-    FOLLOW_typeAnnotation_in_typeAnnotations2089: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x00000400]),
-    FOLLOW_106_in_typeAnnotations2092: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
-    FOLLOW_IDENTIFIER_in_typeAnnotation2108: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x04000000, 0x00000000]),
-    FOLLOW_90_in_typeAnnotation2110: new org.antlr.runtime.BitSet([0x00000000, 0x08000000]),
-    FOLLOW_LITERAL_in_typeAnnotation2114: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
-    FOLLOW_commaOrSemicolon_in_typeAnnotation2116: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_104_in_extends1493: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
+    FOLLOW_IDENTIFIER_in_extends1495: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_oneway_in_function1512: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF8800]),
+    FOLLOW_functionType_in_function1515: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
+    FOLLOW_IDENTIFIER_in_function1519: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x00000200]),
+    FOLLOW_105_in_function1523: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
+    FOLLOW_field_in_function1525: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
+    FOLLOW_106_in_function1528: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00001200]),
+    FOLLOW_throwz_in_function1530: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000200]),
+    FOLLOW_typeAnnotations_in_function1533: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
+    FOLLOW_commaOrSemicolon_in_function1536: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_107_in_oneway1572: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_108_in_throwz1585: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x00000200]),
+    FOLLOW_105_in_throwz1587: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
+    FOLLOW_field_in_throwz1591: new org.antlr.runtime.BitSet([0x00000000, 0x90000000,0x00000001, 0x33FF6400]),
+    FOLLOW_106_in_throwz1595: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_fieldIdentifier_in_field1613: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF6000]),
+    FOLLOW_fieldRequiredness_in_field1616: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
+    FOLLOW_fieldType_in_field1619: new org.antlr.runtime.BitSet([0x00000000, 0x10000000]),
+    FOLLOW_IDENTIFIER_in_field1623: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x04600000, 0x00000238]),
+    FOLLOW_fieldValue_in_field1626: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000238]),
+    FOLLOW_xsdOptional_in_field1633: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000230]),
+    FOLLOW_xsdNillable_in_field1636: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000220]),
+    FOLLOW_xsdAttributes_in_field1639: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000200]),
+    FOLLOW_typeAnnotations_in_field1642: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
+    FOLLOW_commaOrSemicolon_in_field1649: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_intConstant_in_fieldIdentifier1701: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x80000000, 0x00000000]),
+    FOLLOW_95_in_fieldIdentifier1703: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_109_in_fieldRequiredness1716: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_110_in_fieldRequiredness1726: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_90_in_fieldValue1739: new org.antlr.runtime.BitSet([0x00000000, 0xD8000000,0x21000001, 0x00000000]),
+    FOLLOW_constValue_in_fieldValue1741: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_111_in_functionType1756: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_fieldType_in_functionType1766: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_IDENTIFIER_in_fieldType1775: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_baseType_in_fieldType1781: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_containerType_in_fieldType1787: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_simpleBaseType_in_baseType1796: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x00000200]),
+    FOLLOW_typeAnnotations_in_baseType1798: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_112_in_simpleBaseType1808: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_113_in_simpleBaseType1818: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_114_in_simpleBaseType1828: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_115_in_simpleBaseType1840: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_116_in_simpleBaseType1854: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_117_in_simpleBaseType1868: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_118_in_simpleBaseType1884: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_119_in_simpleBaseType1900: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_120_in_simpleBaseType1916: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_simpleContainerType_in_containerType1929: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x00000200]),
+    FOLLOW_typeAnnotations_in_containerType1931: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_mapType_in_simpleContainerType1941: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_setType_in_simpleContainerType1945: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_listType_in_simpleContainerType1949: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_121_in_mapType1958: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x44000000]),
+    FOLLOW_cppType_in_mapType1960: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
+    FOLLOW_122_in_mapType1963: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
+    FOLLOW_fieldType_in_mapType1967: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00200000, 0x00000000]),
+    FOLLOW_85_in_mapType1969: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
+    FOLLOW_fieldType_in_mapType1973: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
+    FOLLOW_123_in_mapType1975: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_124_in_setType1999: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x44000000]),
+    FOLLOW_cppType_in_setType2001: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
+    FOLLOW_122_in_setType2004: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
+    FOLLOW_fieldType_in_setType2008: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
+    FOLLOW_123_in_setType2010: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_125_in_listType2035: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x04000000]),
+    FOLLOW_122_in_listType2037: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x33FF0000]),
+    FOLLOW_fieldType_in_listType2041: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x00000000, 0x08000000]),
+    FOLLOW_123_in_listType2043: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00000000, 0x40000000]),
+    FOLLOW_cppType_in_listType2045: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_126_in_cppType2067: new org.antlr.runtime.BitSet([0x00000000, 0x08000000]),
+    FOLLOW_LITERAL_in_cppType2071: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_105_in_typeAnnotations2089: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x00000400]),
+    FOLLOW_typeAnnotation_in_typeAnnotations2091: new org.antlr.runtime.BitSet([0x00000000, 0x10000000,0x00000000, 0x00000400]),
+    FOLLOW_106_in_typeAnnotations2094: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
+    FOLLOW_IDENTIFIER_in_typeAnnotation2110: new org.antlr.runtime.BitSet([0x00000000, 0x00000000,0x04000000, 0x00000000]),
+    FOLLOW_90_in_typeAnnotation2112: new org.antlr.runtime.BitSet([0x00000000, 0x08000000]),
+    FOLLOW_LITERAL_in_typeAnnotation2116: new org.antlr.runtime.BitSet([0x00000002, 0x00000000,0x00600000, 0x00000000]),
+    FOLLOW_commaOrSemicolon_in_typeAnnotation2118: new org.antlr.runtime.BitSet([0x00000002, 0x00000000]),
     FOLLOW_set_in_intConstant0: new org.antlr.runtime.BitSet([0x00000002, 0x00000000])
 });
 

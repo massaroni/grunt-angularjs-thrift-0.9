@@ -5,7 +5,9 @@ var Preconditions = require('precondition');
 var util = require('../common/utils');
 var clone = require('clone');
 
-var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, ThriftRetryHandler) {
+var httpConfig = {transformResponse: [], transformRequest: [], timeout: 30000};
+
+var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler) {
   Preconditions.checkType(util.isNotEmptyString(endpointUrl), 'Expected endpoint url, but was %s', endpointUrl);
   Preconditions.checkType(util.isNotEmptyString(serviceName), 'Expected service name, but was %s', serviceName);
   Preconditions.checkType(util.isNotEmptyString(functionName), 'Expected function name, but was %s', functionName);
@@ -54,13 +56,22 @@ var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceNam
     }
   }
 
+  function httpErrorCallback(data, status) {
+    var httpFail = {data: data, status: status, type: 'httpfail'};
+
+    if (util.isSomething(ThriftRetryHandler)) {
+      ThriftRetryHandler.handleError(self, httpFail, getState());
+    } else {
+      reject(httpFail);
+    }
+  }
+
   this.doCall = function doCall() {
     Preconditions.checkType(rejected === false, 'Can\'t retry a thrift service call that has already completed with a reject.');
     Preconditions.checkType(resolved === false, 'Cant\'t retry a thrift service call that has already resolved.');
 
     if (args === null) {
       args = Array.prototype.slice.call(arguments);
-      args.push(thriftCallback);
     }
 
     for (var i = 0; i < paramArray.length; i++) {
@@ -68,17 +79,42 @@ var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceNam
       Preconditions.checkType(util.isSomething(args[i]), 'Missing %s argument.', paramArray[i]);
     }
 
-    var transport = new Thrift.TXHRTransport(endpointUrl);
-    var protocol = new Thrift.TJSONProtocol(transport);
+    var transport = new Thrift.Transport('');
+    var protocol = new Thrift.Protocol(transport);
     var client = new ClientCtor(protocol);
 
-    var clientFunction = client[functionName];
-    Preconditions.checkType(util.isFunction(clientFunction), 'Thrift service %s has no function %s', serviceName, functionName);
+    var thriftSend = client['send_' + functionName];
+    var thriftRecv = client['recv_' + functionName];
+    Preconditions.checkType(util.isFunction(thriftSend) && util.isFunction(thriftRecv) , 'Thrift service %s has no function %s', serviceName, functionName);
 
+    var postData = thriftSend.apply(client, args);
     callCount++;
 
     try {
-      clientFunction.apply(client, args);
+      var post = $http.post(endpointUrl, postData, httpConfig);
+      Preconditions.checkType(!!post, 'Cant make a new http post.');
+      post.then(function onSuccess(reply) {
+        try {
+          Preconditions.checkType(util.isObject(reply), 'Unexpected success reply: %s', reply);
+          var replyJson = reply.data;
+          Preconditions.checkType(util.isString(replyJson), 'Expected json reply but was %s', replyJson);
+          client.output.transport.setRecvBuffer(replyJson);
+          var response = thriftRecv.call(client);
+          thriftCallback(response);
+        } catch (e) {
+          thriftCallback(e);
+        }
+      }, function onError(data, status) {
+        console.log('Thrift rpc error.', data, status);
+        if (isConnError(status)) {
+          httpErrorCallback(data, status);
+        } else if (status instanceof Error) {
+          thriftCallback(status);
+        } else {
+          console.log('Unexpected thrift rpc error:', data, status);
+          httpErrorCallback(data, status);
+        }
+      });
     } catch (e) {
       if (util.isSomething(ThriftRetryHandler)) {
         ThriftRetryHandler.handleError(self, e, getState());
@@ -161,14 +197,14 @@ module.exports = function registerAngularThriftService(angularModule, urlPathPre
 
   var endpointUrl = (util.stringEndsWith(urlPathPrefix, '/') ? urlPathPrefix : urlPathPrefix + '/') + serviceName;
 
-  var service = function thriftService($q, ThriftRetryHandler) {
+  var service = function thriftService($q, $http, ThriftRetryHandler) {
     var self = this;
 
     util.forEach(functionMap, function buildRpcFunction(functionName, paramArray) {
       Preconditions.checkType(util.isArray(paramArray), 'Expected an array of parameter names, but was %s', paramArray);
 
       self[functionName] = function thriftRpcFn() {
-        var client = new ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, ThriftRetryHandler);
+        var client = new ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler);
         var args = Array.prototype.slice.call(arguments);
         return client.doCall.apply(client, args);
       };
@@ -176,10 +212,15 @@ module.exports = function registerAngularThriftService(angularModule, urlPathPre
   };
 
   if (util.isSomething(retryConfig)) {
-    angularModule.service('Thrift' + serviceName, ['$q', retryConfig.service, service]);
+    angularModule.service('Thrift' + serviceName, ['$q', '$http', retryConfig.service, service]);
   } else {
-    angularModule.service('Thrift' + serviceName, ['$q', service]);
+    angularModule.service('Thrift' + serviceName, ['$q', '$http', service]);
   }
 
   return service;
+};
+
+
+function isConnError(httpStatus) {
+  return typeof httpStatus === 'number' && (httpStatus < 200 || httpStatus > 301);
 };

@@ -1,11 +1,14 @@
-Thrift Angular Code Generator
+Thrift 0.9.x Angular Code Generator
 =============================
-Make Thrift rpc calls to your Thrift http server, from javascript in a browser, in a website or cordova/phonegap app.  This is a grunt module that compiles Thrift IDL into commonjs javascript, for use with browserify or webpack.  The generated angularjs module generates an angular service for each Thrift service, at runtime.
+Make Thrift rpc calls to your Thrift http server, from javascript in a browser, in a website or cordova/phonegap app.  This is a grunt module that compiles Thrift IDL into commonjs javascript, for use with browserify or webpack.  The generated angularjs module generates an angular service for each Thrift service, at runtime.  For Thrift 1.0 support, see [grunt-angularjs-thrift](https://github.com/massaroni/grunt-angularjs-thrift).
 
 Dependencies
 ============
-Thrift: This is packaged with a pre-release snapshot of the Thrift 1.0 javascript runtime, from the [Apache Thrift](https://github.com/apache/thrift) repository, and so it depends on a Thrift 1.0 compiler, on the build machine.  You can build a Thrift 1.0 compiler from the Apache Thrift repository.  It will be backward compatible with Thrift 0.9.x IDL and server endpoints.
+Install a thrift 0.9.x compiler on your machine: [Apache Thrift](https://thrift.apache.org/)
 
+Installation
+============
+npm install grunt-angularjs-thrift-0.9
 
 Example Gruntfile.js Configuration
 ==================================
@@ -14,7 +17,7 @@ Example Gruntfile.js Configuration
 
     module.exports = function (grunt) {
       // load the grunt plugin
-      require('grunt-angularjs-thrift/compiler/grunt-thrift-generator')(grunt);
+      require('grunt-angularjs-thrift-0.9/compiler/grunt-thrift-generator')(grunt);
 
       // configure the grunt plugin
       grunt.initConfig({
@@ -27,7 +30,7 @@ Example Gruntfile.js Configuration
               }
             ],
             thriftSrcRoot: 'app/src/thrift/', // root directory of the above src path
-            thriftBin: '~/dev/thrift/compiler/cpp/build/thrift', // this is your Thrift 1.0 compiler
+            thriftBin: 'thrift', // this is your Thrift 0.9.x compiler
 
             // (optional) with this property, it will generate angular services (at runtime, so you won't find any generated js files with angular services)
             angularServices: {
@@ -46,7 +49,7 @@ Example Gruntfile.js Configuration
               }
             ],
             thriftSrcRoot: 'app/src/thrift/',
-            thriftBin: '/Users/kmassaroni/dev/thrift/compiler/cpp/build/thrift'
+            thriftBin: 'thrift'
           }
         }
       });
@@ -94,9 +97,9 @@ Example: Load Thrift In Your App
     require('./thrift-retry-service');
 
     // generate the angular thrift services, in the ngThriftServices module
-    require('grunt-angularjs-thrift/runtime/ng-thrift-services')(generated);
+    require('grunt-angularjs-thrift-0.9/runtime/ng-thrift-services')(generated);
 
-    // your module must depend on the ngThriftServices module, provided by grunt-angularjs-thrift
+    // your module must depend on the ngThriftServices module, provided by grunt-angularjs-thrift-0.9
     angular.module('my-module', ['ngThriftServices']);
 
     // the naming convention for angular thrift services is: [Thrift][your service name]. So, a thrift service named

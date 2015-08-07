@@ -212,13 +212,15 @@ oneway:
   'oneway' -> ONEWAY;
 
 throwz:
-  'throws' '(' field* ')' -> ^(THROWS field*);
+  'throws' '(' {this.inThrows = true;} field* {this.inThrows = false;}')' -> ^(THROWS field*);
 
 field:
   fieldIdentifier? fieldRequiredness? fieldType name=IDENTIFIER {
 
     if (!!this.serviceName) {
-  	  this.services[this.serviceName][this.functionName].push(name.getText());
+      if (!this.inThrows) {
+  	    this.services[this.serviceName][this.functionName].push(name.getText());
+  	  }
   	}
 
   }fieldValue?

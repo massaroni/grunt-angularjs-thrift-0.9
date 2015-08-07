@@ -135,7 +135,7 @@ module.exports = function (grunt) {
       }
 
       var thriftHeaderFile = path.join(tmpBuildDir, jobId + '_header.js');
-      fs.outputFileSync(thriftHeaderFile, '\n// jshint ignore: start\nvar Thrift = require(\'grunt-angularjs-thrift/runtime/thrift-runtime\');\n');
+      fs.outputFileSync(thriftHeaderFile, '\n// jshint ignore: start\nvar Thrift = require(\'grunt-angularjs-thrift-0.9/runtime/thrift-runtime\');\n');
       allJsFiles.unshift(thriftHeaderFile);
 
       concat(allJsFiles, path.join(dstDir, 'compiled_thrift.js'), function cleanUp() {

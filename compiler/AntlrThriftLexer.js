@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:50:56 ./grammars/AntlrThrift.g 2015-02-04 08:00:16
+// $ANTLR 3.3 Nov 30, 2010 12:50:56 ./grammars/AntlrThrift.g 2015-08-07 17:37:17
 
 var AntlrThriftLexer = function(input, state) {
 // alternate constructor @todo
@@ -1427,9 +1427,9 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.INTCONSTANT;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:295:15: ( ( '+' | '-' )? ( '0' .. '9' )+ )
-            // ./grammars/AntlrThrift.g:295:17: ( '+' | '-' )? ( '0' .. '9' )+
-            // ./grammars/AntlrThrift.g:295:17: ( '+' | '-' )?
+            // ./grammars/AntlrThrift.g:297:15: ( ( '+' | '-' )? ( '0' .. '9' )+ )
+            // ./grammars/AntlrThrift.g:297:17: ( '+' | '-' )? ( '0' .. '9' )+
+            // ./grammars/AntlrThrift.g:297:17: ( '+' | '-' )?
             var alt1=2;
             var LA1_0 = this.input.LA(1);
 
@@ -1454,7 +1454,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:295:30: ( '0' .. '9' )+
+            // ./grammars/AntlrThrift.g:297:30: ( '0' .. '9' )+
             var cnt2=0;
             loop2:
             do {
@@ -1468,7 +1468,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                 switch (alt2) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:295:30: '0' .. '9'
+                    // ./grammars/AntlrThrift.g:297:30: '0' .. '9'
                     this.matchRange('0','9'); 
 
 
@@ -1500,11 +1500,11 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.HEXCONSTANT;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:296:15: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // ./grammars/AntlrThrift.g:296:17: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ./grammars/AntlrThrift.g:298:15: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // ./grammars/AntlrThrift.g:298:17: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             this.match("0x"); 
 
-            // ./grammars/AntlrThrift.g:296:22: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ./grammars/AntlrThrift.g:298:22: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             var cnt3=0;
             loop3:
             do {
@@ -1558,9 +1558,9 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.DUBCONSTANT;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:297:15: ( ( '+' | '-' )? ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )? )
-            // ./grammars/AntlrThrift.g:297:17: ( '+' | '-' )? ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
-            // ./grammars/AntlrThrift.g:297:17: ( '+' | '-' )?
+            // ./grammars/AntlrThrift.g:299:15: ( ( '+' | '-' )? ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )? )
+            // ./grammars/AntlrThrift.g:299:17: ( '+' | '-' )? ( '0' .. '9' )* ( '.' ( '0' .. '9' )+ )? ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
+            // ./grammars/AntlrThrift.g:299:17: ( '+' | '-' )?
             var alt4=2;
             var LA4_0 = this.input.LA(1);
 
@@ -1585,7 +1585,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:297:30: ( '0' .. '9' )*
+            // ./grammars/AntlrThrift.g:299:30: ( '0' .. '9' )*
             loop5:
             do {
                 var alt5=2;
@@ -1598,7 +1598,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                 switch (alt5) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:297:30: '0' .. '9'
+                    // ./grammars/AntlrThrift.g:299:30: '0' .. '9'
                     this.matchRange('0','9'); 
 
 
@@ -1609,7 +1609,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
                 }
             } while (true);
 
-            // ./grammars/AntlrThrift.g:298:17: ( '.' ( '0' .. '9' )+ )?
+            // ./grammars/AntlrThrift.g:300:17: ( '.' ( '0' .. '9' )+ )?
             var alt7=2;
             var LA7_0 = this.input.LA(1);
 
@@ -1618,9 +1618,9 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
             }
             switch (alt7) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:298:18: '.' ( '0' .. '9' )+
+                    // ./grammars/AntlrThrift.g:300:18: '.' ( '0' .. '9' )+
                     this.match('.'); 
-                    // ./grammars/AntlrThrift.g:298:22: ( '0' .. '9' )+
+                    // ./grammars/AntlrThrift.g:300:22: ( '0' .. '9' )+
                     var cnt6=0;
                     loop6:
                     do {
@@ -1634,7 +1634,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                         switch (alt6) {
                         case 1 :
-                            // ./grammars/AntlrThrift.g:298:22: '0' .. '9'
+                            // ./grammars/AntlrThrift.g:300:22: '0' .. '9'
                             this.matchRange('0','9'); 
 
 
@@ -1656,7 +1656,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
             }
 
-            // ./grammars/AntlrThrift.g:299:17: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
+            // ./grammars/AntlrThrift.g:301:17: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
             var alt10=2;
             var LA10_0 = this.input.LA(1);
 
@@ -1665,7 +1665,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
             }
             switch (alt10) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:299:18: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+                    // ./grammars/AntlrThrift.g:301:18: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
                     if ( this.input.LA(1)=='E'||this.input.LA(1)=='e' ) {
                         this.input.consume();
 
@@ -1675,7 +1675,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
                         this.recover(mse);
                         throw mse;}
 
-                    // ./grammars/AntlrThrift.g:299:30: ( '+' | '-' )?
+                    // ./grammars/AntlrThrift.g:301:30: ( '+' | '-' )?
                     var alt8=2;
                     var LA8_0 = this.input.LA(1);
 
@@ -1700,7 +1700,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                     }
 
-                    // ./grammars/AntlrThrift.g:299:43: ( '0' .. '9' )+
+                    // ./grammars/AntlrThrift.g:301:43: ( '0' .. '9' )+
                     var cnt9=0;
                     loop9:
                     do {
@@ -1714,7 +1714,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                         switch (alt9) {
                         case 1 :
-                            // ./grammars/AntlrThrift.g:299:43: '0' .. '9'
+                            // ./grammars/AntlrThrift.g:301:43: '0' .. '9'
                             this.matchRange('0','9'); 
 
 
@@ -1752,8 +1752,8 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.IDENTIFIER;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:300:15: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ./grammars/AntlrThrift.g:300:17: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ./grammars/AntlrThrift.g:302:15: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ./grammars/AntlrThrift.g:302:17: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             if ( (this.input.LA(1)>='A' && this.input.LA(1)<='Z')||this.input.LA(1)=='_'||(this.input.LA(1)>='a' && this.input.LA(1)<='z') ) {
                 this.input.consume();
 
@@ -1763,7 +1763,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
                 this.recover(mse);
                 throw mse;}
 
-            // ./grammars/AntlrThrift.g:301:17: ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ./grammars/AntlrThrift.g:303:17: ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop11:
             do {
                 var alt11=2;
@@ -1811,9 +1811,9 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.WHITESPACE;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:302:15: ( ( ' ' | '\\t' | '\\r' | '\\n' )* )
-            // ./grammars/AntlrThrift.g:302:17: ( ' ' | '\\t' | '\\r' | '\\n' )*
-            // ./grammars/AntlrThrift.g:302:17: ( ' ' | '\\t' | '\\r' | '\\n' )*
+            // ./grammars/AntlrThrift.g:304:15: ( ( ' ' | '\\t' | '\\r' | '\\n' )* )
+            // ./grammars/AntlrThrift.g:304:17: ( ' ' | '\\t' | '\\r' | '\\n' )*
+            // ./grammars/AntlrThrift.g:304:17: ( ' ' | '\\t' | '\\r' | '\\n' )*
             loop12:
             do {
                 var alt12=2;
@@ -1862,11 +1862,11 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.MULTICOMM;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:303:15: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ./grammars/AntlrThrift.g:303:17: '/*' ( options {greedy=false; } : . )* '*/'
+            // ./grammars/AntlrThrift.g:305:15: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ./grammars/AntlrThrift.g:305:17: '/*' ( options {greedy=false; } : . )* '*/'
             this.match("/*"); 
 
-            // ./grammars/AntlrThrift.g:303:22: ( options {greedy=false; } : . )*
+            // ./grammars/AntlrThrift.g:305:22: ( options {greedy=false; } : . )*
             loop13:
             do {
                 var alt13=2;
@@ -1891,7 +1891,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                 switch (alt13) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:303:50: .
+                    // ./grammars/AntlrThrift.g:305:50: .
                     this.matchAny(); 
 
 
@@ -1921,13 +1921,13 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.COMMENT;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:304:15: ( ( '//' (~ '\\n' )* ) )
-            // ./grammars/AntlrThrift.g:304:17: ( '//' (~ '\\n' )* )
-            // ./grammars/AntlrThrift.g:304:17: ( '//' (~ '\\n' )* )
-            // ./grammars/AntlrThrift.g:304:18: '//' (~ '\\n' )*
+            // ./grammars/AntlrThrift.g:306:15: ( ( '//' (~ '\\n' )* ) )
+            // ./grammars/AntlrThrift.g:306:17: ( '//' (~ '\\n' )* )
+            // ./grammars/AntlrThrift.g:306:17: ( '//' (~ '\\n' )* )
+            // ./grammars/AntlrThrift.g:306:18: '//' (~ '\\n' )*
             this.match("//"); 
 
-            // ./grammars/AntlrThrift.g:304:23: (~ '\\n' )*
+            // ./grammars/AntlrThrift.g:306:23: (~ '\\n' )*
             loop14:
             do {
                 var alt14=2;
@@ -1940,7 +1940,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                 switch (alt14) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:304:24: ~ '\\n'
+                    // ./grammars/AntlrThrift.g:306:24: ~ '\\n'
                     if ( (this.input.LA(1)>='\u0000' && this.input.LA(1)<='\t')||(this.input.LA(1)>='\u000B' && this.input.LA(1)<='\uFFFF') ) {
                         this.input.consume();
 
@@ -1979,12 +1979,12 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.UNIXCOMMENT;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:305:15: ( ( '#' (~ '\\n' )* ) )
-            // ./grammars/AntlrThrift.g:305:17: ( '#' (~ '\\n' )* )
-            // ./grammars/AntlrThrift.g:305:17: ( '#' (~ '\\n' )* )
-            // ./grammars/AntlrThrift.g:305:18: '#' (~ '\\n' )*
+            // ./grammars/AntlrThrift.g:307:15: ( ( '#' (~ '\\n' )* ) )
+            // ./grammars/AntlrThrift.g:307:17: ( '#' (~ '\\n' )* )
+            // ./grammars/AntlrThrift.g:307:17: ( '#' (~ '\\n' )* )
+            // ./grammars/AntlrThrift.g:307:18: '#' (~ '\\n' )*
             this.match('#'); 
-            // ./grammars/AntlrThrift.g:305:22: (~ '\\n' )*
+            // ./grammars/AntlrThrift.g:307:22: (~ '\\n' )*
             loop15:
             do {
                 var alt15=2;
@@ -1997,7 +1997,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                 switch (alt15) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:305:23: ~ '\\n'
+                    // ./grammars/AntlrThrift.g:307:23: ~ '\\n'
                     if ( (this.input.LA(1)>='\u0000' && this.input.LA(1)<='\t')||(this.input.LA(1)>='\u000B' && this.input.LA(1)<='\uFFFF') ) {
                         this.input.consume();
 
@@ -2036,8 +2036,8 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.ST_IDENTIFIER;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:306:15: ( ( 'a' .. 'z' | 'A' .. 'Z' | '-' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )* )
-            // ./grammars/AntlrThrift.g:306:17: ( 'a' .. 'z' | 'A' .. 'Z' | '-' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )*
+            // ./grammars/AntlrThrift.g:308:15: ( ( 'a' .. 'z' | 'A' .. 'Z' | '-' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )* )
+            // ./grammars/AntlrThrift.g:308:17: ( 'a' .. 'z' | 'A' .. 'Z' | '-' ) ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )*
             if ( this.input.LA(1)=='-'||(this.input.LA(1)>='A' && this.input.LA(1)<='Z')||(this.input.LA(1)>='a' && this.input.LA(1)<='z') ) {
                 this.input.consume();
 
@@ -2047,7 +2047,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
                 this.recover(mse);
                 throw mse;}
 
-            // ./grammars/AntlrThrift.g:307:17: ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )*
+            // ./grammars/AntlrThrift.g:309:17: ( '.' | 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' | '-' )*
             loop16:
             do {
                 var alt16=2;
@@ -2095,9 +2095,9 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
         try {
             var _type = this.LITERAL;
             var _channel = org.antlr.runtime.BaseRecognizer.DEFAULT_TOKEN_CHANNEL;
-            // ./grammars/AntlrThrift.g:308:15: ( ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) ) )
-            // ./grammars/AntlrThrift.g:308:17: ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) )
-            // ./grammars/AntlrThrift.g:308:17: ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) )
+            // ./grammars/AntlrThrift.g:310:15: ( ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) ) )
+            // ./grammars/AntlrThrift.g:310:17: ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) )
+            // ./grammars/AntlrThrift.g:310:17: ( ( '\\'' (~ '\\'' )* '\\'' ) | ( '\"' (~ '\"' )* '\"' ) )
             var alt19=2;
             var LA19_0 = this.input.LA(1);
 
@@ -2115,11 +2115,11 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
             }
             switch (alt19) {
                 case 1 :
-                    // ./grammars/AntlrThrift.g:308:18: ( '\\'' (~ '\\'' )* '\\'' )
-                    // ./grammars/AntlrThrift.g:308:18: ( '\\'' (~ '\\'' )* '\\'' )
-                    // ./grammars/AntlrThrift.g:308:19: '\\'' (~ '\\'' )* '\\''
+                    // ./grammars/AntlrThrift.g:310:18: ( '\\'' (~ '\\'' )* '\\'' )
+                    // ./grammars/AntlrThrift.g:310:18: ( '\\'' (~ '\\'' )* '\\'' )
+                    // ./grammars/AntlrThrift.g:310:19: '\\'' (~ '\\'' )* '\\''
                     this.match('\''); 
-                    // ./grammars/AntlrThrift.g:308:24: (~ '\\'' )*
+                    // ./grammars/AntlrThrift.g:310:24: (~ '\\'' )*
                     loop17:
                     do {
                         var alt17=2;
@@ -2132,7 +2132,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                         switch (alt17) {
                         case 1 :
-                            // ./grammars/AntlrThrift.g:308:25: ~ '\\''
+                            // ./grammars/AntlrThrift.g:310:25: ~ '\\''
                             if ( (this.input.LA(1)>='\u0000' && this.input.LA(1)<='&')||(this.input.LA(1)>='(' && this.input.LA(1)<='\uFFFF') ) {
                                 this.input.consume();
 
@@ -2159,11 +2159,11 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                     break;
                 case 2 :
-                    // ./grammars/AntlrThrift.g:308:41: ( '\"' (~ '\"' )* '\"' )
-                    // ./grammars/AntlrThrift.g:308:41: ( '\"' (~ '\"' )* '\"' )
-                    // ./grammars/AntlrThrift.g:308:42: '\"' (~ '\"' )* '\"'
+                    // ./grammars/AntlrThrift.g:310:41: ( '\"' (~ '\"' )* '\"' )
+                    // ./grammars/AntlrThrift.g:310:41: ( '\"' (~ '\"' )* '\"' )
+                    // ./grammars/AntlrThrift.g:310:42: '\"' (~ '\"' )* '\"'
                     this.match('\"'); 
-                    // ./grammars/AntlrThrift.g:308:46: (~ '\"' )*
+                    // ./grammars/AntlrThrift.g:310:46: (~ '\"' )*
                     loop18:
                     do {
                         var alt18=2;
@@ -2176,7 +2176,7 @@ org.antlr.lang.augmentObject(AntlrThriftLexer.prototype, {
 
                         switch (alt18) {
                         case 1 :
-                            // ./grammars/AntlrThrift.g:308:47: ~ '\"'
+                            // ./grammars/AntlrThrift.g:310:47: ~ '\"'
                             if ( (this.input.LA(1)>='\u0000' && this.input.LA(1)<='!')||(this.input.LA(1)>='#' && this.input.LA(1)<='\uFFFF') ) {
                                 this.input.consume();
 

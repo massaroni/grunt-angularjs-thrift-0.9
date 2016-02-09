@@ -44,8 +44,9 @@ var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceNam
     };
   }
 
-  function thriftCallback(result) {
+  function thriftCallback(result, reply) {
     if (result instanceof Error) {
+      console.log('Thrift error log: ', result, reply);
       if (util.isSomething(ThriftRetryHandler)) {
         ThriftRetryHandler.handleError(self, result, getState());
       } else {
@@ -102,7 +103,7 @@ var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceNam
           var response = thriftRecv.call(client);
           thriftCallback(response);
         } catch (e) {
-          thriftCallback(e);
+          thriftCallback(e, reply);
         }
       }, function onError(data, status) {
         console.log('Thrift rpc error.', data, status);

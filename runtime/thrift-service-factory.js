@@ -7,7 +7,7 @@ var clone = require('clone');
 
 var httpConfig = {transformResponse: [], transformRequest: [], timeout: 30000};
 
-var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler) {
+var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler, options) {
   Preconditions.checkType(util.isNotEmptyString(endpointUrl), 'Expected endpoint url, but was %s', endpointUrl);
   Preconditions.checkType(util.isNotEmptyString(serviceName), 'Expected service name, but was %s', serviceName);
   Preconditions.checkType(util.isNotEmptyString(functionName), 'Expected function name, but was %s', functionName);
@@ -92,6 +92,7 @@ var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceNam
     callCount++;
 
     try {
+      var httpConfig = getHttpOptions(serviceName, functionName, options);
       var post = $http.post(endpointUrl, postData, httpConfig);
       Preconditions.checkType(!!post, 'Cant make a new http post.');
       post.then(function onSuccess(reply) {
@@ -189,7 +190,7 @@ function checkRetryConfig(config) {
  * The final url is: [urlPathPrefix]/[serviceName]
  * All thrift service javascript types must be globals.
  */
-module.exports = function registerAngularThriftService(angularModule, urlPathPrefix, retryConfig, serviceName, functionMap) {
+module.exports = function registerAngularThriftService(angularModule, urlPathPrefix, retryConfig, serviceName, functionMap, options) {
   Preconditions.checkType(util.isObject(angularModule), 'Expected angularjs module, but was %s', angularModule);
   Preconditions.checkType(util.isString(urlPathPrefix), 'Expected url path prefix, but was %s', urlPathPrefix);
   Preconditions.checkType(util.isString(serviceName), 'Expected thrift service name, but was %s', serviceName);
@@ -205,7 +206,7 @@ module.exports = function registerAngularThriftService(angularModule, urlPathPre
       Preconditions.checkType(util.isArray(paramArray), 'Expected an array of parameter names, but was %s', paramArray);
 
       self[functionName] = function thriftRpcFn() {
-        var client = new ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler);
+        var client = new ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler, options);
         var args = Array.prototype.slice.call(arguments);
         return client.doCall.apply(client, args);
       };
@@ -224,4 +225,53 @@ module.exports = function registerAngularThriftService(angularModule, urlPathPre
 
 function isConnError(httpStatus) {
   return typeof httpStatus === 'number' && (httpStatus < 200 || httpStatus > 301);
-};
+}
+
+function getHttpOptions(serviceName, functionName, options) {
+  var timeoutMs = getHttpTimeout(serviceName, functionName, options);
+  if (timeoutMs === httpConfig.timeout) {
+    return httpConfig;
+  }
+
+  var configClone = clone(httpConfig);
+  configClone.timeout = timeoutMs;
+  return configClone;
+}
+
+function getHttpTimeout(serviceName, functionName, options) {
+  var ms = httpConfig.timeout;
+
+  if (!options) {
+    return ms;
+  }
+
+  if (!!options.httpTimeoutMs) {
+    ms = options.httpTimeoutMs;
+  }
+
+  var httpTimeouts = options.httpTimeouts;
+  if (!httpTimeouts) {
+    return ms;
+  }
+
+  var service = httpTimeouts[serviceName];
+  if (!service) {
+    return ms;
+  }
+
+  if (!!service.httpTimeoutMs) {
+    ms = service.httpTimeoutMs;
+  }
+
+  var func = service.functions[functionName];
+  if (!func) {
+    return ms;
+  }
+
+  var funcTimeout = func.httpTimeoutMs;
+  if (!!funcTimeout) {
+    return funcTimeout;
+  }
+
+  return ms;
+}

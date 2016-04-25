@@ -14,7 +14,25 @@ var util = require('../common/utils');
 
 var moduleName = 'ngThriftServices';
 
-module.exports = function buildAngularThriftServices(config) {
+/**
+ *
+ * @param config
+ * @param options
+ * example:
+ * {
+ *   httpTimeoutMs: 30000
+ *   httpTimeouts: {
+ *     MyThriftServiceName: {
+ *       httpTimeoutMs: 20000,
+ *       functions: {
+ *         myFunctionName: 10000
+ *       }
+ *     }
+ *   }
+ * }
+ *
+ */
+module.exports = function buildAngularThriftServices(config, options) {
   util.checkIsSomething(config, 'Undefined thrift configuration.');
   var dependencies = !!(config.retryConfig) ? [config.retryConfig.module] : [];
   var angularModule = angular.module(moduleName, dependencies);
@@ -27,7 +45,7 @@ module.exports = function buildAngularThriftServices(config) {
 
   Object.keys(services).forEach(function (serviceName) {
     var functionMap = services[serviceName];
-    serviceFactory(angularModule, rootUrl, config.retryConfig, serviceName, functionMap);
+    serviceFactory(angularModule, rootUrl, config.retryConfig, serviceName, functionMap, options);
   });
 };
 

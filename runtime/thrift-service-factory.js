@@ -263,7 +263,12 @@ function getHttpTimeout(serviceName, functionName, options) {
     ms = service.httpTimeoutMs;
   }
 
-  var func = service.functions[functionName];
+  var functions = service.functions;
+  if (!functions) {
+    return ms;
+  }
+
+  var func = functions[functionName];
   if (!func) {
     return ms;
   }

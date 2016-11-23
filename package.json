@@ -10,18 +10,17 @@
     "url": "https://github.com/massaroni/grunt-angularjs-thrift-0.9"
   },
   "dependencies": {
-    "precondition": "1.0.0",
     "concat-files": "0.1.0",
     "fs-extra": "0.12.0",
     "merge": "1.2.0",
     "path": "0.11.14",
-    "shelljs": "0.3.0",
+    "precondition": "1.0.0",
     "recursive-readdir": "1.2.1",
-    "node-uuid": "1.4.2",
-    "underscore": "1.6.0"
+    "shelljs": "0.3.0",
+    "underscore": "1.6.0",
+    "uuid": "^3.0.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=0.8.0"
   }

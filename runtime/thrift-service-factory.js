@@ -5,7 +5,15 @@ var Preconditions = require('precondition');
 var util = require('../common/utils');
 var clone = require('clone');
 
-var httpConfig = {transformResponse: [], transformRequest: [], timeout: 30000};
+var httpConfig = {
+  transformResponse: [],
+  transformRequest: [],
+  timeout: 30000,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'text/plain'
+  }
+};
 
 var ThriftFunctionClient = function ThriftFunctionClient(endpointUrl, serviceName, functionName, paramArray, $q, $http, ThriftRetryHandler, options) {
   Preconditions.checkType(util.isNotEmptyString(endpointUrl), 'Expected endpoint url, but was %s', endpointUrl);

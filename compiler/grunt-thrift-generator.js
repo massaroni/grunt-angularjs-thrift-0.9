@@ -8,7 +8,7 @@ var util = require('../common/utils');
 var Preconditions = require('precondition');
 var path = require('path');
 var fs = require('fs-extra');
-var uuid = require('node-uuid');
+var uuid = require('uuid');
 var thriftServiceExtractor = require('./thrift-service-extractor');
 
 module.exports = function (grunt) {
